@@ -19,7 +19,7 @@
 
 "engines": {
     "node": "v0.10.x",
-    "npm": "v1.0.x"
+    "npm": "v1.x.x"
   },
 
   "author": "Silvertale",
