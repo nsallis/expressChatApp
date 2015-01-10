@@ -1,14 +1,18 @@
 {
-    "name": "defcon",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-      "express": "~2.5.8",
-      "ejs": "~0.7.1",
-      "socket.io": "~0.9.6",
+  "name": "StarFire",
+  "version": "0.0.1",
+  "description": "space game",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "~0.7.2",
+    "express": "~2.5.8",
     "jade": "~1.8.2",
+    "socket.io": "~0.9.17"
   },
-  "engines": {
-    "node": "0.10.x"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Silvertale",
+  "license": "BSD-2-Clause"
 }
