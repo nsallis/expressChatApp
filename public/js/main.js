@@ -6,14 +6,18 @@ socket.on('status', function (data) {
     $('#status').html(data.status);
 });
 
-//socket.on('message', function(data) {
-//    $('#conversation'.html(data.text);
-//});
+socket.on('message', function(data) {
+    document.getElementById("conversation").innerHTML = data;
+});
 
 $('#reset').click(function() {
     socket.emit('reset');
 });
 
+
+document.getElementById("send").onclick(function(){
+	socket.emit('message sent', Document.getElementById('usertext').innerHTML);
+});
 //$('#send').click(function(){
 //    socket.emit('message sent', $('#usertext').val());//sends the user's message to the server
 //});
