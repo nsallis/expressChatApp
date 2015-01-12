@@ -6,6 +6,6 @@
 </br>
 <div id="conversation"></div></br>
 <form action="">
-<input type="text" id="usertext" onKeyPress(event, this.form)> <button type="button" id="send">Send</button> 
+<input type="text" id="usertext" onKeyPress="keyPress(event, this.form)"> <button type="button" id="send">Send</button> 
 </form>
 
