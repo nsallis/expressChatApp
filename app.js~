@@ -48,9 +48,9 @@ io.sockets.on('connection', function (socket) {
     status = "War is imminent!";
     io.sockets.emit('status', { status: status });
   });
-  //socket.on('message sent', function(data){
-//	var text = data;
-//	console.log("message sent: " + text);
-//	io.sockets.emit('message', text);
-//  });
+  socket.on('message sent', function(data){
+	var text = data;
+	console.log("message sent: " + text);
+	io.sockets.emit('message', text);
+  });
 });
