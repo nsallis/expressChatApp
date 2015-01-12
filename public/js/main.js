@@ -21,7 +21,7 @@ function keyPress(e, form){
 	socket.emit('message sent', document.getElementById('usertext').value);
 	document.getElementById('usertext').value = "";
 	}
-}
+};
 
 
 socket.on('message', function(data) {
