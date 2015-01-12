@@ -6,6 +6,6 @@
 </br>
 <div id="conversation" style="overflow:scroll;"></div></br>
 <form action="">
-<input type="text" id="usertext" onKeyPress="keyPress(event, this.form)" autofocus> <button type="button" id="send">Send</button> 
+<input type="text" id="usertext" autofocus> <button type="button" id="send">Send</button> 
 </form>
 
