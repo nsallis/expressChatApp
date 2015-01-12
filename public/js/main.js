@@ -21,10 +21,10 @@ if(document.getElementById("usertext").value != ""){
 
 $("#chatform").submit(function() {
 if(document.getElementById("usertext").value != ""){
-    	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
-    	document.getElementById('usertext').value = "";
-    	return false;
+	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
+	document.getElementById('usertext').value = "";
 	}
+	return false;
 });
 
 
