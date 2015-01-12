@@ -1,3 +1,4 @@
+//this script runs on the server waiting for connections
 var express = require('express'),  
     app = express.createServer(express.logger()),
     io = require('socket.io').listen(app),
@@ -46,5 +47,10 @@ io.sockets.on('connection', function (socket) {
   socket.on('reset', function (data) {
     status = "War is imminent!";
     io.sockets.emit('status', { status: status });
+  });
+  socket.on('message sent', function(data){
+	var text = data;
+	console.log("message sent: " + text);
+	io.sockets.emit('message', text);
   });
 });
