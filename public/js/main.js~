@@ -16,7 +16,7 @@ $('#reset').click(function() {
 
 
 document.getElementById("send").onclick = function(){
-	socket.emit('message sent', Document.getElementById('usertext').innerHTML);
+	socket.emit('message sent', document.getElementById('usertext').innerHTML);
 };
 //$('#send').click(function(){
 //    socket.emit('message sent', $('#usertext').val());//sends the user's message to the server
