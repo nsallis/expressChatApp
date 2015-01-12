@@ -5,7 +5,7 @@
 </br>
 </br>
 <div id="conversation" style="overflow:scroll;"></div></br>
-<form action="">
+<form action="" id="chatform">
 <input type="text" id="usertext" autofocus> <button type="button" id="send">Send</button> 
 </form>
 
