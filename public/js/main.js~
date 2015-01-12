@@ -12,8 +12,15 @@ $('#reset').click(function() {
 
 document.getElementById("send").onclick = function(){
 	socket.emit('message sent', document.getElementById('usertext').value);
+	document.getElementById('usertext').value = "";
 };
 
+function keyPress(e, form){
+	var key=e.keyCode || e.which;
+	if (key==13){
+	form.submit();
+	}
+}
 
 
 socket.on('message', function(data) {

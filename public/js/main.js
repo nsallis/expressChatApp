@@ -15,6 +15,13 @@ document.getElementById("send").onclick = function(){
 	document.getElementById('usertext').value = "";
 };
 
+function keyPress(e, form){
+	var key=e.keyCode || e.which;
+	if (key==13){
+	socket.emit('message sent', document.getElementById('usertext').value);
+	document.getElementById('usertext').value = "";
+	}
+}
 
 
 socket.on('message', function(data) {
