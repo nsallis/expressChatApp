@@ -1,11 +1,11 @@
-<!-- this contains the raw html for the webpage -->
+<!-- this contains the raw html for the webpage 
 <div id="status"></div>  
-<button id="reset">Reset!</button>
+<button id="reset">Reset!</button>-->
 </br>
 </br>
 </br>
-<div id="conversation"></div></br>
+<div id="conversation" style="overflow:scroll;"></div></br>
 <form action="">
-<input type="text" id="usertext" onKeyPress="keyPress(event, this.form)"> <button type="button" id="send">Send</button> 
+<input type="text" id="usertext" onKeyPress="keyPress(event, this.form)" autofocus> <button type="button" id="send">Send</button> 
 </form>
 
