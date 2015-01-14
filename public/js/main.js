@@ -21,7 +21,7 @@ if(document.getElementById("usertext").value != ""){
 	}
 };
 
-s
+
 $("#chatform").submit(function(e) {
 	if(document.getElementById("usertext").value != ""){
 	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
