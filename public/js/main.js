@@ -22,6 +22,13 @@ if(document.getElementById("usertext").value != ""){
 };
 
 
+$("#chatform").submit(function(e) {
+	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
+	document.getElementById('usertext').value = "";
+    	e.preventDefault();
+});
+
+
 
 
 
