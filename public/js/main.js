@@ -22,21 +22,22 @@ if(document.getElementById("usertext").value != ""){
 };
 
 
-var form = document.getElementById('chatform');
+function processForm(e) {
+    if (e.preventDefault) e.preventDefault();
 
-try {
-    form.addEventListener("submit", messageSubmit, false);
-} catch(e) {
-    form.attachEvent("onsubmit", messageSubmit); //Internet Explorer 8-
-}
-
-
-
-function messageSubmit(){
-if(document.getElementById("usertext").value != ""){
 	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
 	document.getElementById('usertext').value = "";
-	}
+    /* do what you want with the form */
+
+    // You must return false to prevent the default form behavior
+    return false;
+}
+
+var form = document.getElementById('chatform');
+if (form.attachEvent) {
+    form.attachEvent("submit", processForm);
+} else {
+    form.addEventListener("submit", processForm);
 }
 
 
