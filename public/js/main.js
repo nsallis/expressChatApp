@@ -25,9 +25,9 @@ if(document.getElementById("usertext").value != ""){
 var form = document.getElementById('chatform');
 
 try {
-    form.addEventListener("submit", someFunction, false);
+    form.addEventListener("submit", messageSubmit, false);
 } catch(e) {
-    form.attachEvent("onsubmit", someFunction); //Internet Explorer 8-
+    form.attachEvent("onsubmit", messageSubmit); //Internet Explorer 8-
 }
 
 
