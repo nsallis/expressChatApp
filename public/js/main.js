@@ -24,7 +24,7 @@ if(document.getElementById("usertext").value != ""){
 
 function processForm(e) {
     if (e.preventDefault) e.preventDefault();
-
+	console.log("form submitted!");
 	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
 	document.getElementById('usertext').value = "";
     /* do what you want with the form */
