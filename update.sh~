@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "push comment: "
+read comment
+git commit . $comment
+git push heroku master
+
