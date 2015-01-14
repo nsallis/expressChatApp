@@ -21,19 +21,14 @@ if(document.getElementById("usertext").value != ""){
 	}
 };
 
-
+s
 $("#chatform").submit(function(e) {
-	document.getElementById("debug").innerHTML = "submit";
+	if(document.getElementById("usertext").value != ""){
 	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
 	document.getElementById('usertext').value = "";
+	}
     	e.preventDefault();
 });
-
-function sendText(){
-	document.getElementById("debug").innerHTML = "submitted";
-}
-
-
 
 
 
