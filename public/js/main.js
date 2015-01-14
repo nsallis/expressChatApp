@@ -21,13 +21,24 @@ if(document.getElementById("usertext").value != ""){
 	}
 };
 
-var chatform = document.getElementById('chatform');
-chatform.on('submit', function(){
+
+var form = document.getElementById('chatform');
+
+try {
+    form.addEventListener("submit", someFunction, false);
+} catch(e) {
+    form.attachEvent("onsubmit", someFunction); //Internet Explorer 8-
+}
+
+
+
+function messageSubmit(){
 if(document.getElementById("usertext").value != ""){
 	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
 	document.getElementById('usertext').value = "";
 	}
-});
+}
+
 
 
 socket.on('message', function(data) {
