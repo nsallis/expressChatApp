@@ -22,23 +22,15 @@ if(document.getElementById("usertext").value != ""){
 };
 
 
-function processForm(e) {
-    if (e.preventDefault) e.preventDefault();
-	console.log("form submitted!");
-	socket.emit('message sent', "|" + document.getElementById("username").value + "|" + document.getElementById('usertext').value);//send the text with the username surrounded by "|"
-	document.getElementById('usertext').value = "";
-    /* do what you want with the form */
-
-    // You must return false to prevent the default form behavior
-    return false;
-}
-
-var form = document.getElementById('chatform');
-if (form.attachEvent) {
-    form.attachEvent("submit", processForm);
-} else {
-    form.addEventListener("submit", processForm);
-}
+$(function() {
+    $("#username").keypress(function (e) {
+        if(e.which == 13) {
+            
+            $(this).val("");
+            e.preventDefault();
+        }
+    });
+});
 
 
 
